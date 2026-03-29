@@ -275,7 +275,7 @@ void twoSum(int arr[], int n, int target)
         char *A = ht_get(ht, comp);
         if (A)
         {
-            printf("[%d, %d]\n", atoi(A), i);
+            printf("[%d, %d]\n", A, i);
             ht_destroy(ht);
             return;
         }
