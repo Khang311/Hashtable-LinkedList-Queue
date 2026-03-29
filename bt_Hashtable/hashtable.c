@@ -272,10 +272,10 @@ void twoSum(int arr[], int n, int target)
     for (int i = 0; i < n; i++)
     {
         int comp = target - arr[i];
-        char *A = ht_get(ht, comp);
-        if (A)
+        char *k = ht_get(ht, comp);
+        if (k)
         {
-            printf("[%d, %d]\n", A, i);
+            printf("[%d, %d]\n", k, i);
             ht_destroy(ht);
             return;
         }
@@ -283,6 +283,6 @@ void twoSum(int arr[], int n, int target)
         sprintf(c, "%d", i);
         ht_put(ht, arr[i], c);
     }
-    printf("Not Found\n");
     ht_destroy(ht);
+    printf("Not Found\n");
 }
